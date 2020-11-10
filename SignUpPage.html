@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+<link rel="stylesheet" href="lec2Style.css">
+    <meta charset="utf-8">
+      <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Catamaran"</link>
+    <link rel="stykesheeet"
+          href="https://fonts.googleapis.com/css?family=Antic Slab" </link>
+    <title>Sign-Up Page</title>
+  </head>
+  <body>
+<div class="container">
+    <form>
+         <div class="inner">
+    <h3 style='font-family: Antic Slab;
+               margin-bottom: 0px;'>Sign Up</h3>
+    <p id="SU" style="font-family:ariel"><b>Email</b></p>
+      
+    <input  type="Email" id="email" title="Enter valid email with @, phone, or username">
+    <p id="SU" style="font-family: ariel;"><b>Password</b></p>
+    <input  onclick= "init()" type="Password" id="password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}(?=.*[!@#$%^&*()-_=+\|[]{};:/?.><])" title="Must contain at least one number,Special charecter and one uppercase and lowercase letter, and at least 6 or more characters"><br>
+      <div id="conf"><p id="SU" style="font-family:ariel;"><b>Confirm</b></p></div>
+      
+      <input  onclick="pass_check()"type="Password" id="passwordS" title="Enter the password again"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}(?=.*[!@#$%^&*()-_=+\|[]{};:/?.><])" ><br>
+      
+    
+    <div class="butC">
+      <button onclick="checker()" type="button" class="btn btn-primary" id="butS" style='font-family: Antic Slab'>Create my account</button>
+    </div>
+    </form>
+ 
+
+
+    <p style='font-family: Catamaran;'>Already a member?
+    <a href="LogIn.html">Sign-in</a></p>
+      
+  </div>
+</div>
+      
+    <div class="container">
+          <div id="message" style="display: none;">
+  <h3>Password must contain the following:</h3>
+  <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+  <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+  <p id="number" class="invalid">A <b>number</b></p>
+  <p id= "charechter" class="invalid">Special Charecter</p>
+  <p id="length" class="invalid">Minimum <b>6 characters</b></p><br>
+</div>
+      </div>
+
+ <script src="Js.js"></script>
+  </body>
+</html>
