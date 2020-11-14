@@ -77,17 +77,16 @@ if(myInput.value.match(specialCharacter)) {
 
 function when_click(){
     
-    if(document.getElementById)
     var email_check=document.getElementById("email").value;
     var pass_res= document.getElementById("password").value;
     var messages =['There was less then 6 Charecters!'
-                   ,'\nThere was no upper case!'
-                   ,'\nThere was no lower case'
-                   ,'\nThere was no numbers'
-                   ,'\nThere was no Characters!'
-                   ,'\nThe email was inccorect'
+                   ,'There was no upper case!'
+                   ,'There was no lower case'
+                   ,'There was no numbers'
+                   ,'There was no Characters!'
+                   ,'The email was inccorect'
                   ];
-    var final_message=['\nPlease Follow the form and make sure all requirments are marked!'];
+    var final_message=['Please Follow the form and make sure all requirments are marked!'];
     var counter =[0,0,0,0,0,0];
     var lowerCaseLetters = /[a-z]/g;
     var specialCharacter=/[!,#,$,%,@,>,<,=,+]/g;
@@ -115,19 +114,19 @@ function when_click(){
     for (var i =0;i<6;i++){
         if(counter[i]>0){
             flag++;
-            res= res.concat(messages[i]);
+            res= res.concat(messages[i]+"<br>");   
         }
         
 }
+    
     if(flag>0){
         
         res=res.concat(final_message);
-        console.log(res[1])
-        alert(res);
+        document.getElementById("MBody").innerHTML=res;
         return false;
     }
     else{
-        alert(document.getElementById('email').value+"\n"+pass_res);
+        document.getElementById("MBody").innerHTML=document.getElementById('email').value+"<br>"+pass_res;
         return true;
     }
     
@@ -151,11 +150,10 @@ function checker(){
     var confirm = document.getElementById("passwordS").value;
     
     if (pass==confirm){
-        if(when_click())
-        alert("You have been signed up now.");
+        when_click();
 }
     else
-        alert("Password didn't match!");
+        document.getElementById("MBody").innerHTML = "Your Passwords didn't match!";
         
     
 }

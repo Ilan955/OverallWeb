@@ -2,8 +2,11 @@
 <html lang="en" dir="ltr">
   <head>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 <link rel="stylesheet" href="lec2Style.css">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <meta charset="utf-8">
       <link rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Catamaran"</link>
@@ -12,45 +15,98 @@
     <title>Sign-Up Page</title>
   </head>
   <body>
+<!---------------Drop-Down Menue------------------>
+<div class="btn-group" style="margin-left: 30%;">
+  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Action
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="LogIn.html">Log-In</a>
+    <a class="dropdown-item" href="Contact.html">Contact-Us</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="SignUpPage.html">Refresh</a>
+  </div>
+</div>
+<!---------------Text-Fields ------------------>
 <div class="container">
     <form>
          <div class="inner">
     <h3 style='font-family: Antic Slab;
                margin-bottom: 0px;'>Sign Up</h3>
-    <p id="SU" style="font-family:ariel"><b>Email</b></p>
+    <p id="SU" style="font-family:ariel"><span style="font-size: 15px;"class="material-icons">
+email
+</span><b>Email</b></p>
       
-    <input  type="Email" id="email" title="Enter valid email with @, phone, or username">
-    <p id="SU" style="font-family: ariel;"><b>Password</b></p>
-    <input  onclick= "init()" type="Password" id="password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}(?=.*[!@#$%^&*()-_=+\|[]{};:/?.><])" title="Must contain at least one number,Special charecter and one uppercase and lowercase letter, and at least 6 or more characters"><br>
-      <div id="conf"><p id="SU" style="font-family:ariel;"><b>Confirm</b></p></div>
+    <input class="form-control" type="Email" id="email" title="Enter valid email with @, phone, or username">
+    <p id="SU" style="font-family: ariel;"><b><span style="font-size: 15px;"class="material-icons">
+vpn_key
+</span> Password</b></p>
+    <input class="form-control" onclick= "init()" type="Password" id="password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}(?=.*[!@#$%^&*()-_=+\|[]{};:/?.><])" title="Must contain at least one number,Special charecter and one uppercase and lowercase letter, and at least 6 or more characters"><br>
+      <div id="conf"><p id="SU" style="font-family:ariel;"><span style="font-size: 15px;" class="material-icons">
+check
+</span><b>Confirm</b></p></div>
       
-      <input  onclick="pass_check()"type="Password" id="passwordS" title="Enter the password again"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}(?=.*[!@#$%^&*()-_=+\|[]{};:/?.><])" ><br>
+      <input  class="form-control" onclick="pass_check()"type="Password" id="passwordS" title="Enter the password again"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}(?=.*[!@#$%^&*()-_=+\|[]{};:/?.><])" ><br>
       
     
     <div class="butC">
-      <button onclick="checker()" type="button" class="btn btn-primary" id="butS" style='font-family: Antic Slab'>Create my account</button>
+      <button data-toggle="modal" data-target="#myModal" style="margin-top: 2px;"onclick="checker()" type="button" class="btn btn-primary" id="butS" style='font-family: Antic Slab'>Create my account</button>
+       
     </div>
     </form>
  
 
-
+ 
     <p style='font-family: Catamaran;'>Already a member?
     <a href="LogIn.html">Sign-in</a></p>
       
   </div>
 </div>
-      
+<!---------------Showing verification------------------>
     <div class="container">
+        
           <div id="message" style="display: none;">
+              <div class="jumbotron">
   <h3>Password must contain the following:</h3>
   <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
   <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
   <p id="number" class="invalid">A <b>number</b></p>
   <p id= "charechter" class="invalid">Special Charecter</p>
   <p id="length" class="invalid">Minimum <b>6 characters</b></p><br>
+              
 </div>
+         </div>   
       </div>
-
+      
+      
+      <div style="white-space: pre-line" class="modal" id="myModal" >
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Information</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="MBody">
+        <p>Modal body text goes here.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+      
+      
+      
+      
+      
+      <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+      
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
  <script src="Js.js"></script>
+<!---------------END of signUpPage------------------>
   </body>
 </html>

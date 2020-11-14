@@ -2,41 +2,65 @@
 <html lang="en" dir="ltr">
   <head>
 <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    
 <link rel="stylesheet" href="lec2Style.css">
     <meta charset="utf-8">
       <link rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Architects Daughter"</link>
     <link rel="stykesheeet"
           href="https://fonts.googleapis.com/css?family=Antic Slab" </link>
+      
     <title>Contact-Us Page</title>
   </head>
   <body>
-      <div id="all" class="container" style="height:100%;width:90%;margin-top:4%">
+   <!-- Example single danger button -->
+<div class="btn-group" style="margin-left: 15%;">
+  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Action
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="LogIn.html">Log-In</a>
+    <a class="dropdown-item" href="SignUpPage.html">Sign-Up</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="Contact.html">Refresh</a>
+  </div>
+</div>
+      <div id="all" class="container-fluid" style="width:70%; margin-top: 5px;" >
+          
+          <!--This is for the first label -->
+          <div class="row">
           <h3 style="color:blue; margin-top:2%;margin-left: 2%; font-family: Antic Slab;" id="CH3">CONTACT US</h3>
-          <div id="left" class="jumbotron" style="height:420px; width:50%; float:left;">
-
+            </div>
+          <div class="row">
+        <!--This is for the left side of the site -->  
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+          <div  class="jumbotron" style="height:84%;" >
               <form>
-                  <input  type="text" id="name" placeholder="Name*" required>
-                  <input type="email" id="emailC" placeholder="Email*" required>
-                  <select style="margin-left:2%" name="Contact us concerning" id="CR" placeholder="HH">
+                  <input class="form-control" type="text" id="name" placeholder="Name*" required>
+                  <input class="form-control" type="email" id="emailC" placeholder="Email*" required>
+                 <select class="form-control">
                       <option value="" deafault selected disabled>Contact us concerning*</option>
                       <option value="Sign-Up problems">ReachUsOut</option>
                       <option value="C">I need someone to call me back</option>
-                  </select><br>
-                  <br><textarea rows='3' name="HE" id="sub" placeholder="Subject*" style="margin-left:2%;width:55%; padding-left:1%"></textarea>
-                  <br><button onclick="ContactPageCheck()"type="button" id="submitBTN" class="btn btn-success">SUBMIT</button>
+                  </select>
+                  <br><textarea id="sub" class="form-control" rows="3" placeholder="Write your concern*"></textarea>
+                  <button onclick="ContactPageCheck() "type="button" id="submitBTN" class="btn btn-success">SUBMIT</button>
               </form>
             </div>
-              <div class="right-top" style="float:right;">
-
-                    <h3 style="color: white; padding:2%" content="&#xf05: font-family: Architects Daughter;"><i class='far fa-comments' style="font-size:48px;"></i> Need 24/7 SUPPORT</h3>
+              </div>
+          
+          
+          <!--This is for the right side of the site-->
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+              <div class="right-top">
+                    <h3 style="color: white; padding:2%" content="&#xf05: font-family: Architects Daughter;"><i class='far fa-comments' style="font-size:46px;"></i> Need 24/7 SUPPORT</h3>
                   <a href="mailto:ilan19555@gmail.com?subject=ContactSupport">
                       <button class="btn btn-primary" type="button" id="BC"> Contact Support</button>
                   </a>
 
                   </div>
-                      <div class="right-bott" style="float:right; font-family: Antic Slab;">
+                      <div class="right-bott" style=" font-family: Antic Slab;">
                       <P ><b>CALL SALES NOW <i class='fas fa-phone' style="font-size:20px;"></i></b><br>+1-20-504-3500</P>
                         <p><b>SALES HOURS <i class='far fa-clock' style="font-size:20px;"></i></b></p>
                           <p style="font-size:12px;">7am-7pm CST</p>
@@ -45,12 +69,14 @@
                           <p><b>MAILING ADDRESS <i class='far fa-envelope' style="font-size:20px;"></i></b></p>
                           <p style="font-size:12px;">GoNature<br>ilan19555@gmail.com<br>AustinTexas 78701<br>UnitedStates</p>
                       </div>
-
-
-
-
-
-      </div>
+          </div>
+     </div>
+          </div>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <script src="http://code.jquery.com/jquery.js"></script>
+ 
       <script src="Js.js"></script>
   </body>
 </html>
