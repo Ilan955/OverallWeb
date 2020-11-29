@@ -80,13 +80,13 @@ function when_click(){
     var email_check=document.getElementById("email").value;
     var pass_res= document.getElementById("password").value;
     var messages =['There was less then 6 Charecters!'
-                   ,'There was no upper case!'
-                   ,'There was no lower case'
-                   ,'There was no numbers'
-                   ,'There was no Characters!'
-                   ,'The email was inccorect'
+                   ,'There was no upper case!\n'
+                   ,'There was no lower case\n'
+                   ,'There was no numbers\n'
+                   ,'There was no Characters!\n'
+                   ,'The email was inccorect\n'
                   ];
-    var final_message=['Please Follow the form and make sure all requirments are marked!'];
+    var final_message=['Please Follow the form and make sure all requirments are marked! \n'];
     var counter =[0,0,0,0,0,0];
     var lowerCaseLetters = /[a-z]/g;
     var specialCharacter=/[!,#,$,%,@,>,<,=,+]/g;
@@ -114,7 +114,7 @@ function when_click(){
     for (var i =0;i<6;i++){
         if(counter[i]>0){
             flag++;
-            res= res.concat(messages[i]+"<br>");   
+            res+= messages[i];   
         }
         
 }
@@ -127,6 +127,7 @@ function when_click(){
     }
     else{
         document.getElementById("MBody").innerHTML=document.getElementById('email').value+"<br>"+pass_res;
+        
         return true;
     }
     
@@ -150,11 +151,15 @@ function checker(){
     var confirm = document.getElementById("passwordS").value;
     
     if (pass==confirm){
-        when_click();
+        if(when_click())
+          return true;
+        
+        return false;
+        
 }
     else
         document.getElementById("MBody").innerHTML = "Your Passwords didn't match!";
-        
+        document.getElementById("MBody").style.display = 'block';
     
 }
 
@@ -163,15 +168,20 @@ function ContactPageCheck(){
     var mail = document.getElementById("emailC").value;
      var name= document.getElementById("name").value;
     var sub=  document.getElementById("sub").value;
-    if(mail=="" ||name==""||sub=="")
+    if(mail=="" ||name==""||sub==""){
     alert("Enter all required Fiileds");
+    return false
+}
     else{
     if(mail.match("@")){
        
-        alert(mail+'\n'+name+'\n'+sub);
+        alert("Your concern was sent to us, we wil be in touch!\nThank you");
+        return true;
+
     }
-    else
+    else{
         alert("Please enter valide Email")
+        return false;}
     }
     
 }
