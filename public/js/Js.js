@@ -132,9 +132,19 @@ function when_click(){
     }
     
 }
-
+function for_update(){
+  var pass= document.getElementById("password").value;
+   
+  var confirm = document.getElementById("passwordS").value;
+  
+ 
+  if (pass==confirm){
+    return true}
+    alert("passwords didn't match!")
+    return false;
+}
 function pass_check(){
-   var my_input=document.getElementById("passwordS");
+   var my_input=document.getElementById("passwordS").value;
     var result= document.getElementById("password").value;
     
     console.log(result);
@@ -148,8 +158,10 @@ function pass_check(){
 function checker(){
     
     var pass= document.getElementById("password").value;
+   
     var confirm = document.getElementById("passwordS").value;
     
+   
     if (pass==confirm){
         if(when_click())
           return true;

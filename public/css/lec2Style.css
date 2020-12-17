@@ -14,25 +14,68 @@ h3{
 
 }
 
-
-.inner{
-  background-color: #5D5C61;
-  padding-left:5px;
-  padding-top: 5px;
-  padding-bottom: 20px;
-  padding-right: 10px;
-  position: relative;
-  margin: auto;
-  width:350px;
-  border-radius: 10%;
-  margin-top: 20px;
+#password{
+  border-radius: 7px;
+    border: 2px solid rgb(248, 238, 236);
+    padding: 5px; 
+    margin-left:3px;
+  }
+#firstName{
+  border-radius: 7px;
+    border: 2px solid rgb(248, 238, 236);
+    padding: 5px; 
+    margin-left:3px;
 }
+#promoCode{
+  border-radius: 7px;
+    border: 2px solid rgb(248, 238, 236);
+    padding: 5px; 
+    margin-left:3px;
+}
+#lastName{
+  border-radius: 7px;
+  border: 2px solid rgb(248, 238, 236);
+  padding: 5px; 
+  margin-left:3px;
+}
+  #email{
+    border-radius: 7px;
+    border: 2px solid rgb(230, 226, 231);
+    padding: 5px; 
+    margin-left:3px;
+  }
+  .bg-password-image {
+    background: url('/pic/lockForget.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .bg-login-image{
+    background: url('/pic/login.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+.bg-register-image{
+    background: url('/pic/sign-Up.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.bg-change-image
+{
+  background: url('/pic/change.jpg');
+    background-position: center;
+    background-size: cover;
+
+}
+
 .reset{
   padding: 5px;
   font-weight : bold;
-  font-size :10px;
-  text-align: right;
-  margin-top:10px;
+  font-size :12px;
+  text-align: center;
+  margin-top:10%;
+
 
 }
 
